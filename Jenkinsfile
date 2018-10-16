@@ -2,7 +2,7 @@ pipeline {
   agent {
     kubernetes {
       label 'pod-template-maven-3.5.4'
-      defaultContainer 'jnlp'
+      defaultContainer 'maven-container'
       yamlFile 'KubernetesPod.yaml'
     }
   }
