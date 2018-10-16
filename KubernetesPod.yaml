@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 spec:
   containers:
-  - name: maven-container
+  - name: maven-3.5.4-container
     image: maven:3.5.4-jdk-8-alpine
     command:
     - cat

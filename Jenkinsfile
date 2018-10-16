@@ -1,15 +1,15 @@
 pipeline {
   agent {
     kubernetes {
-      label 'pod-template-maven-3.5.4'
-      defaultContainer 'maven-container'
+      label 'maven-3.5.4-pod-template'
+      defaultContainer 'maven-3.5.4-container'
       yamlFile 'KubernetesPod.yaml'
     }
   }
   stages {
     stage('Build') {
       steps {
-        container('maven-container') {
+        container('maven-3.5.4-container') {
           sh 'mvn -B -DskipTests clean package'
         }
       }
